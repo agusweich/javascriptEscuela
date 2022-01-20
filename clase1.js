@@ -15,8 +15,13 @@ alert ("su nota final es " + notafinal)
 
 if (notafinal >=7){
     alert ("Aprobado")
-}else{
-    alert ("Desaprobado")
 }
+else if(notafinal <7){
+    alert ("Desaprobado")
+}else{
+    alert ("No ingresaste dato correcto")
+}
+
+
 
 
