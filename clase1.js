@@ -1,27 +1,64 @@
- function Saludar (){
-    alert("Bienvenidos") //Declara función
+
+class alumno{
+
+    constructor (id,nombre,nota){
+    
+        this.id= id;
+        this.nombre= nombre;
+        this.nota= nota;
+    }    
+
 }
 
-Saludar(); //llama función
-// Saludar();
+const nota1= new alumno (1, 'agustin', 10);
+const nota2= new alumno (2, 'juan', 5);
+const nota3= new alumno (3, 'sofia', 7);
+
+
+const bbdd= [
+    nota1,
+    nota2,
+    nota3
+]    
+
+
+const carrito= [] 
+console.log(bbdd)
+
+function RenderizarCursos(){
+    bbdd.forEach((el)=>{
+        document.write (`
+        <br>
+        ${el.nombre}   <button onclick="ver()">VER</button>
+        <br>
+        <br>`)
+
+        
+    
+        
+        
+    })
+
+    document.write(`
+    <button onclick="ordenarnota()">Ordenar</button><br>`)
+    
+
+}    
 
 
 
-let notaprimera= parseInt (prompt("ingrese nota 1"))
-let notasegunda= parseInt (prompt("ingrese nota 2"))
-let notafinal= (notaprimera + notasegunda)/2
+function ver (){
+    carrito.push(bbdd[0])
 
-alert ("su nota final es " + notafinal)
-
-if (notafinal >=7){
-    alert ("Aprobado")
 }
-else if(notafinal <7){
-    alert ("Desaprobado")
-}else{
-    alert ("No ingresaste dato correcto")
+
+
+function ordenarnota(){
+
+    bbdd.sort((a,b)=>{
+        return a.nota - b.nota
+    })
+    
 }
 
-
-
-
+ordenarnota()
