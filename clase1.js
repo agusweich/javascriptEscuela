@@ -1,5 +1,5 @@
 
-class alumno{
+/*class alumno{
 
     constructor (id,nombre,nota){
     
@@ -61,4 +61,62 @@ function ordenarnota(){
     
 }
 
-ordenarnota()
+ordenarnota() */
+
+
+
+
+
+/*let botonclick = document.getElementById("ingresar")
+      botonclick.addEventListener("click", respuesta)
+      
+      function respuesta (){
+          let usuario = document.getElementById("usuario").value
+          let contra = document.getElementById("contrasenia").value
+          let valores = document.createElement("p")
+          valores.innerHTML = "<h2>los valores obtenidos son </h2>" +usuario + " y " +contra
+          document.body.appendChild(valores)
+      }
+*/
+
+var datos = [];
+
+function registrar(){
+    var nombre= document.getElementById ("alumno").value;
+    var materia= document.getElementById ("materia").value;
+    var primerparcial= document.getElementById ("notauno").value;
+    var segundoparcial= document.getElementById ("notados").value;
+
+    datos.push({
+
+        "alumno": nombre,
+        "materia": materia,
+        "nota 1": primerparcial,
+        "nota 2": segundoparcial,
+        "Promedio": (parseInt(primerparcial)+ parseInt(segundoparcial)) /2
+        
+      
+            
+    
+
+    });
+
+        document.getElementById("frmcali").reset();
+        alert ('DATOS GUARDADOS')
+        cerrarmodal ();
+
+    
+}
+
+
+function mostrarModal(){
+    document.getElementById("modalCali").classList.add ('active');
+}
+
+
+
+function cerrarmodal(){
+    document.getElementById("modalCali").classList.remove ('active');
+}
+
+
