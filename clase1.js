@@ -3,9 +3,14 @@
 
 let botonclick = document.getElementById ("ingresar");
 botonclick.addEventListener ("click", respuesta);
+
+
+
+
         
    
 function respuesta(){
+    
 
 
     let nombre= document.getElementById ("alumno").value;
@@ -34,7 +39,7 @@ function respuesta(){
     
     
 
-        alert ('DATOS GUARDADOS')
+        swal ('DATOS GUARDADOS', "felicitaciones", "success");
         console.log (info)
         localStorage.setItem("informacion alumno", JSON.stringify(info))
         let informacion = localStorage.getItem ("informacion alumno")
@@ -42,7 +47,17 @@ function respuesta(){
         
 }
 
-    
+
+
+
+
+ 
+
+
+
+
+
+
 
 
 
