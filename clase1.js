@@ -6,7 +6,6 @@ botonclick.addEventListener ("click", respuesta);
 
 
 
-
         
    
 function respuesta(){

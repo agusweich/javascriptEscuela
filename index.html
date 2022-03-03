@@ -60,6 +60,21 @@
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="clase1.js"></script>
+
+    <script>
+      let url = "https://jsonplaceholder.typicode.com/users"
+      fetch (url)
+      .then(Response=>Response.json())
+      .then(data=>mostrardata(data))
+      .catch (error=>console.log(error))
+
+      let mostrardata = (data) => {
+        console.log(data)
+        
+      }
+    </script>
+    
+
     
 </body>
 
